@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satva Café | Wake Up and Smell Good</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the elegant look */
+        .modern-bg {
+            background-color: #1a1a1a; /* Dark almost-black background */
+        }
+        .accent-color {
+            color: #b8860b; /* A deep copper/gold tone */
+        }
+        .accent-bg {
+            background-color: #b8860b;
+        }
+        .custom-shadow {
+            box-shadow: 0 10px 15px -3px rgba(184, 134, 11, 0.2), 0 4px 6px -2px rgba(184, 134, 11, 0.1);
+        }
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom font for Kannada text for better display */
+        .kannada-text {
+            font-family: 'Noto Sans Kannada', sans-serif;
+        }
+        /* Placeholder for Kannada Font - If Noto Sans Kannada is not available, it defaults to Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;700&display=swap');
+
+        /* Responsive map container height */
+        .map-container {
+            height: 300px; /* Default height for mobile */
+        }
+        @media (min-width: 768px) {
+            .map-container {
+                height: 450px; /* Taller on desktop */
+            }
+        }
+    </style>
+</head>
+<body class="modern-bg text-gray-100 min-h-screen">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 modern-bg bg-opacity-95 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo Placeholder (Mimicking the uploaded design) -->
+            <div class="text-2xl font-bold flex items-center">
+                <span class="accent-color text-3xl font-serif">S</span><span class="text-white text-xl">atva</span>
+                <span class="text-sm ml-2 tracking-widest text-gray-400">CAFE</span>
+            </div>
+            
+            <!-- Desktop/Mobile Nav Links -->
+            <nav class="space-x-8 text-sm hidden md:flex">
+                <a href="#hero" class="hover:accent-color transition duration-300">Home</a>
+                <a href="#menu" class="hover:accent-color transition duration-300">Menu</a>
+                <a href="#story" class="hover:accent-color transition duration-300">Our Story</a>
+                <a href="#contact" class="hover:accent-color transition duration-300">Contact</a>
+                <a href="#location-map" class="hover:accent-color transition duration-300">Location</a>
+            </nav>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-800 focus:outline-none">
+                <svg class="w-6 h-6 text-gray-100" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden modern-bg border-t border-gray-800">
+            <a href="#hero" class="block py-2 px-4 text-sm hover:accent-color">Home</a>
+            <a href="#menu" class="block py-2 px-4 text-sm hover:accent-color">Menu</a>
+            <a href="#story" class="block py-2 px-4 text-sm hover:accent-color">Our Story</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:accent-color">Contact</a>
+            <a href="#location-map" class="block py-2 px-4 text-sm hover:accent-color">Location</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative overflow-hidden py-24 sm:py-32 md:py-48 flex items-center justify-center">
+            <!-- Background Image Placeholder for atmosphere -->
+            <div class="absolute inset-0 opacity-10 bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/1a1a1a/b8860b?text=Coffee+Beans+Texture');"></div>
+            
+            <div class="relative z-10 text-center max-w-4xl px-4">
+                <h1 class="text-6xl sm:text-7xl lg:text-9xl font-extrabold leading-none accent-color tracking-tight drop-shadow-lg">
+                    Satva
+                </h1>
+                <p class="mt-4 text-2xl sm:text-3xl text-gray-200 font-light">
+                    Where tradition meets taste.
+                </p>
+                <p class="mt-8 text-lg sm:text-xl font-medium tracking-wider text-white">
+                    "WAKE UP AND SMELL GOOD"
+                </p>
+                <a href="#menu" class="mt-10 inline-block px-8 py-3 text-sm font-semibold text-gray-900 accent-bg rounded-full transition duration-300 hover:scale-105 custom-shadow">
+                    View Full Menu
+                </a>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="py-20 sm:py-32 max-w-5xl mx-auto px-4">
+            <h2 class="text-4xl sm:text-5xl text-center mb-16 accent-color">The Menu</h2>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                
+                <!-- Food Items Column -->
+                <div class="p-6 border border-gray-800 rounded-xl shadow-lg hover:border-amber-700 transition duration-300">
+                    <h3 class="text-3xl font-medium mb-8 text-white border-b border-gray-700 pb-3">FOOD</h3>
+                    <div class="space-y-6">
+                        <!-- Menu Item 1 -->
+                        <div class="flex justify-between items-end pb-3 border-b border-dashed border-gray-700">
+                            <span class="text-lg font-semibold">Cookies</span>
+                            <span class="text-xl accent-color font-mono">Rs.5/-</span>
+                        </div>
+                        <!-- Menu Item 2 -->
+                        <div class="flex justify-between items-end pb-3 border-b border-dashed border-gray-700">
+                            <span class="text-lg font-semibold">Cream Roll</span>
+                            <span class="text-xl accent-color font-mono">Rs.5/-</span>
+                        </div>
+                        <!-- Menu Item 3 -->
+                        <div class="flex justify-between items-end pb-3 border-b border-dashed border-gray-700">
+                            <span class="text-lg font-semibold">Bun Maska</span>
+                            <span class="text-xl accent-color font-mono">Rs.20/-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drinks Items Column -->
+                <div class="p-6 border border-gray-800 rounded-xl shadow-lg hover:border-amber-700 transition duration-300">
+                    <h3 class="text-3xl font-medium mb-8 text-white border-b border-gray-700 pb-3">DRINKS</h3>
+                    <div class="space-y-6">
+                        <!-- Menu Item 1 -->
+                        <div class="flex justify-between items-end pb-3 border-b border-dashed border-gray-700">
+                            <span class="text-lg font-semibold">Jaggery Tea</span>
+                            <span class="text-xl accent-color font-mono">Rs.10/-</span>
+                        </div>
+                        <!-- Menu Item 2 -->
+                        <div class="flex justify-between items-end pb-3 border-b border-dashed border-gray-700">
+                            <span class="text-lg font-semibold">Hot Coffee</span>
+                            <span class="text-xl accent-color font-mono">Rs.20/-</span>
+                        </div>
+                        <!-- Menu Item 3 -->
+                        <div class="flex justify-between items-end pb-3 border-b border-dashed border-gray-700">
+                            <span class="text-lg font-semibold">Black Tea</span>
+                            <span class="text-xl accent-color font-mono">Rs.10/-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Must Try Section (Spanning both columns on desktop) -->
+                <div class="md:col-span-2 mt-8 text-center p-8 bg-gray-800 rounded-xl">
+                    <h3 class="text-3xl font-bold accent-color mb-4 uppercase">The Satva Must-Try</h3>
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
+                        <span class="text-2xl font-semibold text-white">Bun Maska & Tea</span>
+                        <span class="text-3xl accent-color font-bold font-mono">Rs.30/-</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story/Kannada Branding Section -->
+        <section id="story" class="py-20 sm:py-32 bg-gray-950">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-4xl sm:text-5xl mb-8 accent-color">Our Essence</h2>
+                
+                <!-- Kannada Text from the Image -->
+                <p class="text-6xl sm:text-8xl kannada-text font-bold leading-tight text-white/50 mb-6">
+                    ಸತ್ವ ಕೆಫೆ
+                </p>
+                
+                <p class="text-xl sm:text-2xl text-gray-300 italic mb-10">
+                    "ಬೆಲ್ಲದ ಚಹಾ, ಕಾಫಿ, ಸ್ನ್ಯಾಕ್ಸ್"
+                </p>
+
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    Satva is more than just a café; it's a belief in wholesome goodness and simple pleasures. We source the finest, natural ingredients to ensure every cup of coffee, every sip of tea, and every delicious snack carries the true essence of 'Satva'—pure goodness.
+                </p>
+                
+                <div class="mt-12">
+                    <!-- Updated link to point to the map section -->
+                    <a href="#location-map" class="inline-block px-8 py-3 text-sm font-semibold text-white border border-amber-700 rounded-full transition duration-300 hover:bg-amber-700 hover:text-gray-900">
+                        View Map & Location
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Embed Section -->
+        <section id="location-map" class="py-16 sm:py-24 max-w-7xl mx-auto px-4">
+            <h3 class="text-4xl sm:text-5xl font-medium accent-color mb-10 text-center">Locate Us</h3>
+            <div class="rounded-xl overflow-hidden shadow-2xl custom-shadow border border-gray-800">
+                <!-- Google Maps Embed for the specified location (Hotel Moonlight, Bagalkot) -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.7371801289195!2d75.54035357599763!3d16.007080440625345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb882c457fbefa7%3A0xc4c81ab28df83e04!2sHotel+Moonlight!5e0!3m2!1sen!2sin!4v1701948888042!5m2!1sen!2sin" 
+                    width="100%" 
+                    class="map-container"
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer / Contact Section -->
+    <footer id="contact" class="modern-bg py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <h3 class="text-3xl font-medium accent-color mb-6">Contact & Location</h3>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-12 text-gray-400">
+                <div>
+                    <p class="font-semibold text-white">Address</p>
+                    <!-- Updated Address based on map location -->
+                    <p>Near Hotel Moonlight, Bus Stand Road, Bagalkot, Karnataka</p>
+                </div>
+                <div>
+                    <p class="font-semibold text-white">Hours</p>
+                    <p>Mon - Sat: 8:00 AM - 9:00 PM | Sunday: 9:00 AM - 6:00 PM</p>
+                </div>
+                <div>
+                    <p class="font-semibold text-white">Say Hello</p>
+                    <p>+91 98765 43210 | hello@satvacafe.com</p>
+                </div>
+            </div>
+
+            <p class="mt-12 text-sm text-gray-600">
+                &copy; 2025 Satva Café. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle and Logging -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Log for page load confirmation
+            console.log('Satva Cafe page loaded successfully.'); 
+            
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+
+            button.addEventListener('click', () => {
+                // Log when the mobile menu is toggled
+                console.log('Mobile menu button clicked. Toggling menu visibility.');
+                menu.classList.toggle('hidden');
+            });
+            
+            // Close menu when a link is clicked
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
